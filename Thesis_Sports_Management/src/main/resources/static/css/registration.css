@@ -1,0 +1,62 @@
+.validation-message {
+    font-style: normal;
+    font-size: 12px;
+    color: #FF1C19;
+}
+
+#form-signin {
+    max-width: 420px;
+    padding: 0px 38px 15px;
+    margin: 0 auto;
+}
+
+body {
+	height: 100%;
+	min-width: 900px;
+	background: url('/images/registration-form5.jpg') repeat scroll center center;
+	background-attachment: fixed;
+	background-size: cover;	
+}
+
+#container-id {
+	padding-top: 120px;
+}
+
+.form-signin-heading {
+    text-align:center;
+    margin-bottom: 20px;
+    color: #F0FFFF;
+    font-size: 35px;
+    align: center; 
+    color: white;"
+}
+
+.form-signin {
+    max-width: 420px;
+    padding: 0px 38px 15px;
+    margin: 0 auto;
+}
+
+
+.form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+
+.form-group {
+	padding-top: 5px;
+}
+
+.text-succesfull {
+	color: violet;
+	align: center;
+}
+
+
+
+
+
+
+

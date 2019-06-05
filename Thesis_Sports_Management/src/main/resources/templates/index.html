@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Athens2Football Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" 
+			data-target="#navbar-collapse-main">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>	
+				<span class="icon-bar"></span>		
+			</button>
+		    <a class="navbar-brand" href="#"><img id="mylogo" src="images/A2F-logo.png">
+			</a> 
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-main">
+			<ul class="nav navbar-nav navbar-center">
+				<li><a class="active" href="#">Home</a></li>
+				<li><a th:href="@{/tournaments/list}">Tournaments</a></li>
+				<li><a th:href="@{/logout}" method="get"  id="logout-navbar">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div id="home">
+	<div class="landing-text">
+		<h1>SPORTS MANAGEMENT</h1>
+		<h3>Find the best tournaments and join for a chance to win.</h3>
+		<a th:href="@{/tournaments/list}" class="btn btn-default btn-lg">View Tournaments</a>
+	</div>
+</div>
+
+<div class="padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<img id="map-greece" src="images/greece-map.png">
+			</div>
+			<div class="col-sm-6 text-center">
+				<h2>Sports Management</h2>
+				<hr>
+				<p class="lead"> Welcome to athens2football, a web application that
+				presents active football tournaments in Athens, Greece.</p>
+				<br><br>
+				<p class="lead"> This is the first web application that decided not only
+				to map all the official football tournaments in Athens, but to also give 
+				the users a chance to participate to any tournament they wish.</p>
+			</div>
+		</div>
+	</div> 
+</div>
+
+<div class="padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Built with Spring-Boot</h4>
+				<p>This web application has been built by making use of Spring
+				 Boot, which is a Java Framework.Spring Boot provides a good platform for
+				 Java developers to develop a stand-alone and production-grade spring 
+				 application. Also various Spring frameworks have been also used, 
+				 such as Spring-MVC, Spring-Security and Spring-Data.</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<img src="images/spring-boot-logo.png" class="img-responsive">	
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<h4>Thymeleaf and Bootstrap</h4>
+				<p>In order to create the front-end partial of the application Thymeleaf and
+				Bootstrap has been used. Thymeleaf is a modern server-side Java template engine 
+				for both web and standalone environments, while Bootstrap is a free and open-source
+				CSS framework for developing responsive and mobile-first websites.</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<img src="images/thymeleaf-logo-ps2.jpg" class="img-responsive" id="thymeleaf-logo">	
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="fixed">
+</div>
+
+<div class="padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h4>Here is the cool thing about athens2football</h4>
+				<p> Athens2football is a home for every businessman who would like to 
+				host a tournament on our platform. All you have to do is send us an
+				email and we will look into it and after reaching into a possible 
+				agreement your tournament will be hosted on our platform. Then any visitor
+				that creates an account can join any tournament of his preference after 
+				creating his team. 
+				<p> Also if you are a developer and would like to be a part of our team,
+				since we have administrators to manage the tournaments and perceive the
+				teams send us an email, so you can have a chance to get hired and become
+				a member of athens2football. In addition to that we are looking into
+				developing the web application to support more sports, such as basketball,
+				in the near future, so possible position openings could be occuring.</p>
+			</div>
+			<div class="col-sm-6">
+				<img src="images/tournament-stadium.jpg">
+			</div>
+		</div>
+	</div> 
+</div>
+
+<footer class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-4">
+			<h3>Contact Us</h3>
+			<br>
+			<h4>Athens, Greece</h4>
+			<h4>smassiosdev@gmail.com</h4>
+		</div>
+		<div class="col-sm-4">
+			<h3>My social media</h3>
+			<a href="https://www.facebook.com/spyros.massios" class="fa fa-facebook"></a>
+			<a href="https://www.linkedin.com/in/spyros-massios" class="fa fa-linkedin"></a>
+			<a href="https://www.instagram.com/spyros335" class="fa fa-instagram"></a>
+		</div>
+		<div class="col-sm-4">
+			<img src="images/A2F-logo.png" class="icon">
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

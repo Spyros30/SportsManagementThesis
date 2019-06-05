@@ -1,0 +1,93 @@
+<!DOCTYPE>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org">
+		
+
+<head>
+
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link th:href="@{/css/tournament-list.css}" rel="stylesheet" />
+	<title>Tournaments</title>
+</head>
+
+<body>
+
+
+	<div class="container">	
+		<form th:action="@{/logout}" method="get">
+        <button class="btn btn-md btn-danger btn-block" name="registration"
+                type="Submit">Logout
+        </button>
+   		 </form>
+   		 
+		<h3 class="tour-head">Tournament Directory</h3>
+		<hr>
+		
+		<!-- Add a button -->
+		
+		 	<a th:href="@{/tournaments/showAddForm}"
+				class="btn btn-primary btn-sm mb-3">
+				Add Tournament
+			</a>           
+		
+		<a class = "back-home-first" th:href="@{/index}">Back to Home Page</a>
+		<table class="table table-bordered table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>Tournament Name</th>
+					<th>Stadium Name</th>
+					<th>City</th>
+					<th>Address</th>
+					<th>Reward</th>
+					<th>Start Date</th>
+					<th>Number of Teams</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody class='table-box'>
+				<tr th:each="tempTournament : ${tournaments}">
+			
+					<td th:text="${tempTournament.tournamentName}">
+					<td th:text="${tempTournament.stadiumName}">
+					<td th:text="${tempTournament.city}">
+					<td th:text="${tempTournament.address}">
+					<td th:text="${tempTournament.reward}">
+					<td th:text="${tempTournament.dateStart}">
+					<td th:text="${tempTournament.numberOfTeams}">
+					
+					<td>
+						<!--  Add update button/link --> 
+					  	<a th:href="@{/tournaments/showUpdateForm(tournamentId=${tempTournament.tournamentId})}"
+						   class="btn btn-info btn-sm">
+						   Update
+						</a> 
+						
+					   <!-- Add delete button/link --> 
+						<a th:href="@{/tournaments/delete(tournamentId=${tempTournament.tournamentId})}"
+						   class="btn btn-danger btn-sm"
+						   onclick="if (!(confirm('Are you sure you want to delete this tournament?'))) return false">
+						   Delete
+						</a>
+						<hr>
+						
+						<!-- View Teams Button -->
+						<a th:href="@{/tournaments/teams(tournamentId=${tempTournament.tournamentId})}"
+						   class="btn btn-primary btn-sm mb-3">
+						   View Teams
+						</a> 
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a class = "back-home" th:href="@{/index}">Back to Home Page</a>
+	</div>
+
+
+</body>
+
+</html>

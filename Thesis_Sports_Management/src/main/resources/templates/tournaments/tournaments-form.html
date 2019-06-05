@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Save Tournament</title>
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<form th:action="@{/logout}" method="get">
+        <button class="btn btn-md btn-danger btn-block" name="registration"
+                type="Submit">Logout
+        </button>
+   		</form>
+   		 
+		<h3>Tournament Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Tournament</p>
+		
+		<form action="#" th:action="@{/tournaments/save}"
+						 th:object="${tournament}" method="POST">
+				
+			<!--  Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{tournamentId}" />
+						 
+			<input type="text" th:field="*{tournamentName}"
+					class="form-control mb-4 col-4" placeholder="Tournament Name">
+					
+			<input type="text" th:field="*{stadiumName}"
+					class="form-control mb-4 col-4" placeholder="Stadium Name">
+					
+			<input type="text" th:field="*{city}"
+					class="form-control mb-4 col-4" placeholder="City">
+					
+			<input type="text" th:field="*{address}"
+					class="form-control mb-4 col-4" placeholder="Address">
+					
+			<input type="text" th:field="*{reward}"
+					class="form-control mb-4 col-4" placeholder="Reward">
+					
+			<input type="text" th:field="*{dateStart}"
+					class="form-control mb-4 col-4" placeholder="Start Date">
+		
+			<input type="text" th:field="*{numberOfTeams}"
+					class="form-control mb-4 col-4" placeholder="Number of Teams">
+					
+			<button type="submit" class="btn btn-info col-2">Save</button>
+			
+		</form>
+		
+		<hr>
+		<a th:href="@{/tournaments/list}">Back to Tournaments List</a>
+		
+		
+	</div>
+
+</body>
+
+</html>

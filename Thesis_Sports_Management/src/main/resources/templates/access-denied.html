@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Access Denied</title>
+
+</head>
+
+<body>
+	
+	<h2 style="color:red;"> You do not have the required role. Please go back. </h2> 
+	
+	<hr>
+	<a th:href="@{/index}">Back to Home Page</a>
+	<hr>
+	<a th:href="@{/tournaments/list}">Back to Tournament List</a>
+	
+</body>
+
+</html>
